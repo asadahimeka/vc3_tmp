@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const state = {
-  cached: [],
+  cached: []
 }
 
 export const getters = {}
@@ -9,7 +9,7 @@ export const getters = {}
 export const mutations = {
   CACHE_USER(state, newUser) {
     state.cached.push(newUser)
-  },
+  }
 }
 
 export const actions = {
@@ -33,5 +33,5 @@ export const actions = {
       commit('CACHE_USER', user)
       return user
     })
-  },
+  }
 }

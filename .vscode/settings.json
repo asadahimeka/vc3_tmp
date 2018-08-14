@@ -1,4 +1,5 @@
 {
+  "javascript.implicitProjectConfig.checkJs": false,
   // ===
   // Spacing
   // ===
@@ -12,12 +13,6 @@
   // ===
   // Files
   // ===
-  "files.exclude": {
-    "**/*.log": true,
-    "**/*.log*": true,
-    "**/dist": true,
-    "**/coverage": true
-  },
   "files.associations": {
     ".markdownlintrc": "jsonc"
   },
@@ -58,10 +53,10 @@
   // ===
   // CSS
   // ===
-  "stylelint.enable": true,
-  "css.validate": false,
-  "scss.validate": false,
-  "vetur.validation.style": false,
+  "stylelint.enable": false,
+  "css.validate": true,
+  "scss.validate": true,
+  "vetur.validation.style": true,
   // ===
   // MARKDOWN
   // ===

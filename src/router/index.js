@@ -10,7 +10,7 @@ import routes from './routes'
 Vue.use(VueRouter)
 Vue.use(VueMeta, {
   // The component option name that vue-meta looks for meta info on.
-  keyName: 'page',
+  keyName: 'page'
 })
 
 const router = new VueRouter({
@@ -28,7 +28,7 @@ const router = new VueRouter({
     } else {
       return { x: 0, y: 0 }
     }
-  },
+  }
 })
 
 // Before each route evaluates...

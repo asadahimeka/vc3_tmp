@@ -10,8 +10,8 @@ export default {
   props: {
     routes: {
       type: Array,
-      required: true,
-    },
+      required: true
+    }
   },
   // Render functions are an alternative to templates
   render(h, { props, $style = {} }) {
@@ -32,7 +32,7 @@ export default {
         <a>{getRouteTitle(route)}</a>
       </BaseLink>
     ))
-  },
+  }
 }
 </script>
 

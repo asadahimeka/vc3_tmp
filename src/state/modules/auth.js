@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const state = {
-  currentUser: getSavedState('auth.currentUser'),
+  currentUser: getSavedState('auth.currentUser')
 }
 
 export const mutations = {
@@ -9,14 +9,14 @@ export const mutations = {
     state.currentUser = newValue
     saveState('auth.currentUser', newValue)
     setDefaultAuthHeaders(state)
-  },
+  }
 }
 
 export const getters = {
   // Whether the user is currently logged in.
   loggedIn(state) {
     return !!state.currentUser
-  },
+  }
 }
 
 export const actions = {
@@ -61,7 +61,7 @@ export const actions = {
         }
         return null
       })
-  },
+  }
 }
 
 // ===

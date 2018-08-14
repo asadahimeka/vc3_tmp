@@ -4,5 +4,5 @@
 // provide this object to Webpack in vue.config.js.
 module.exports = {
   title: 'Vue Enterprise Boilerplate',
-  description: 'Opinionated boilerplate project for an enterprise Vue frontend',
+  description: 'Opinionated boilerplate project for an enterprise Vue frontend'
 }

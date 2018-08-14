@@ -1,35 +1,49 @@
+<template>
+  <a
+    v-if="href"
+    v-bind="$attrs"
+    :href="href"
+    target="_blank"
+  ><slot/></a>
+  <router-link
+    v-else
+    v-bind="$attrs"
+    :to="routerLinkTo"
+  ><slot/></router-link>
+</template>
+
 <script>
 export default {
   props: {
     href: {
       type: String,
-      default: '',
+      default: ''
     },
     allowInsecure: {
       type: Boolean,
-      default: false,
+      default: false
     },
     to: {
       type: Object,
-      default: null,
+      default: null
     },
     name: {
       type: String,
-      default: '',
+      default: ''
     },
     params: {
       type: Object,
-      default: () => ({}),
-    },
+      default: () => ({})
+    }
   },
   computed: {
     routerLinkTo({ name, params }) {
       return {
         name,
         params,
-        ...(this.to || {}),
+        ...(this.to || {})
       }
-    },
+    }
   },
   created() {
     this.validateProps()
@@ -69,21 +83,7 @@ export default {
           )
         }
       }
-    },
-  },
+    }
+  }
 }
 </script>
-
-<template>
-  <a
-    v-if="href"
-    v-bind="$attrs"
-    :href="href"
-    target="_blank"
-  ><slot/></a>
-  <router-link
-    v-else
-    v-bind="$attrs"
-    :to="routerLinkTo"
-  ><slot/></router-link>
-</template>

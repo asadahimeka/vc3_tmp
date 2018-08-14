@@ -14,7 +14,7 @@ module.exports = {
   ],
   rules: {
     // Only allow debugger in development
-    'no-debugger': process.env.PRE_COMMIT ? 'error' : 'off',
+    'no-debugger': 'off',
     // Only allow `console.log` in development
     'no-console': process.env.PRE_COMMIT
       ? ['error', { allow: ['warn', 'error'] }]

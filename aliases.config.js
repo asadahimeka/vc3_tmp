@@ -13,12 +13,12 @@ const aliases = {
   '@assets': 'src/assets',
   '@utils': 'src/utils',
   '@state': 'src/state',
-  '@design': 'src/design/index.scss',
+  '@design': 'src/design/index.scss'
 }
 
 module.exports = {
   webpack: {},
-  jest: {},
+  jest: {}
 }
 
 for (const alias in aliases) {
