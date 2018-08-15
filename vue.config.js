@@ -1,22 +1,40 @@
-const appConfig = require('./src/app.config')
+const { aliases, workboxConfig } = require('./config')
 
 module.exports = {
-  configureWebpack: {
-    // We provide the app's title in Webpack's name field, so that
-    // it can be accessed in index.html to inject the correct title.
-    name: appConfig.title,
-    // Set up all the aliases we use in our app.
-    resolve: {
-      alias: require('./aliases.config').webpack
+  baseUrl: process.env.NODE_ENV == 'development' ? '/' : '',
+  // outputDir: undefined,
+  // assetsDir: undefined,
+  // runtimeCompiler: undefined,
+  // parallel: undefined,
+  productionSourceMap: false,
+  /*
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        secure: false,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
     }
   },
+  */
   css: {
-    // Enable CSS source maps.
-    sourceMap: true
+    loaderOptions: {
+      css: {
+        localIdentName: '[hash:base64:8]'
+      }
+    }
   },
-  // Configure Webpack's dev server.
-  // https://github.com/vuejs/vue-cli/blob/dev/docs/cli-service.md
-  devServer: {
-
+  configureWebpack: config => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      ...aliases
+    }
+    if (process.env.NODE_ENV === 'production') {
+      config.plugins.push(workboxConfig)
+    }
   }
 }
