@@ -6,8 +6,7 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build --modern",
     "build:ci": "yarn build --report",
-    "new": "hygen new",
-    "docs": "vuepress dev"
+    "new": "hygen new"
   },
   "gitHooks": {
     "pre-commit": "cross-env PRE_COMMIT=true"
@@ -24,32 +23,29 @@
   "dependencies": {
     "@fortawesome/fontawesome": "1.1.8",
     "@fortawesome/fontawesome-free-solid": "5.0.13",
-    "@fortawesome/vue-fontawesome": "0.0.23",
+    "@fortawesome/fontawesome-svg-core": "^1.2.2",
+    "@fortawesome/vue-fontawesome": "0.1.1",
     "axios": "0.18.0",
     "lodash": "4.17.10",
     "normalize.css": "8.0.0",
     "nprogress": "0.2.0",
-    "vue": "2.5.16",
-    "vue-meta": "1.5.0",
+    "vue": "2.5.17",
+    "vue-meta": "1.5.2",
     "vue-router": "3.0.1",
     "vuex": "3.0.1"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.51",
-    "@vue/cli-plugin-babel": "3.0.0-rc.2",
-    "@vue/cli-plugin-eslint": "3.0.0-rc.2",
-    "@vue/cli-service": "3.0.0-rc.2",
-    "@vue/eslint-config-prettier": "3.0.0-rc.2",
-    "@vue/eslint-config-standard": "3.0.0-rc.2",
+    "@babel/core": "7.0.0-rc.1",
+    "@vue/cli-plugin-babel": "3.0.0",
+    "@vue/cli-plugin-eslint": "3.0.0",
+    "@vue/cli-service": "3.0.0",
+    "@vue/eslint-config-standard": "3.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-loader": "8.0.0-beta.2",
     "cross-env": "5.2.x",
-    "express": "4.16.x",
-    "hygen": "^1.6.2",
-    "markdownlint-cli": "0.10.x",
+    "hygen": "1.6.2",
     "node-sass": "4.9.x",
-    "sass-loader": "7.0.x",
-    "vue-template-compiler": "2.5.16",
-    "vuepress": "^0.14.1"
+    "sass-loader": "7.1.x",
+    "vue-template-compiler": "2.5.17"
   }
 }
